@@ -3,11 +3,18 @@ body {
   color: white;
   font-family: Arial, sans-serif;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
   color: cyan;
   text-shadow: 2px 2px 5px black;
+  margin-top: 20px;
+}
+
+nav {
+  margin: 20px 0;
 }
 
 nav a {
@@ -15,6 +22,8 @@ nav a {
   text-decoration: none;
   margin: 10px;
   font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -32,10 +41,19 @@ article {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 0 10px #333;
+  text-align: center;
+}
+
+img {
+  border-radius: 10px;
+  margin-top: 15px;
+  box-shadow: 0 0 8px #222;
 }
 
 footer {
   color: #aaa;
   font-size: 0.8em;
   margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
 }
