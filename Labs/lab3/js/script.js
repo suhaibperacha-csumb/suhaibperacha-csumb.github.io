@@ -119,20 +119,7 @@ async function getStates() {
 
 
 // FORM VALIDATION
-async function validateForm(e) {
-  let username = document.getElementById("username").value;
-
-  // recheck username on submit to make sure result is fresh
-  let url = `https://csumb.space/api/usernamesAPI.php?username=${username}`;
-  let response = await fetch(url);
-  let data = await response.json();
-
-  if (!data.available) {
-    e.preventDefault();
-    alert("Username is taken");
-    return;
-  }
-
+function validateForm(e) {
   let pwd = document.getElementById("pwd").value;
   let again = document.getElementById("pwdAgain").value;
 
@@ -141,12 +128,10 @@ async function validateForm(e) {
   if (pwd.length < 6) {
     e.preventDefault();
     document.getElementById("passwordError").textContent = " Password must be at least 6 characters";
-    return;
   }
 
   if (pwd !== again) {
     e.preventDefault();
     document.getElementById("passwordError").textContent = " Passwords do not match";
-    return;
   }
 }
