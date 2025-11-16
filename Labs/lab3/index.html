@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <div class="card p-4 shadow">
+        <h2 class="text-center mb-4">Sign Up</h2>
+
+        <form id="signupForm" action="welcome.html">
+
+          <div class="mb-3">
+            <label class="form-label">First Name</label>
+            <input type="text" name="fName" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Last Name</label>
+            <input type="text" name="lName" class="form-control">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Gender</label><br>
+            <input type="radio" name="gender" value="m"> Male
+            <input type="radio" name="gender" value="f" class="ms-3"> Female
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Zip Code</label>
+            <input type="text" id="zip" name="zip" class="form-control">
+            <span id="zipError" class="text-danger small"></span>
+          </div>
+
+          <div class="mb-2">
+            City: <span id="city"></span>
+          </div>
+          <div class="mb-2">
+            Latitude: <span id="latitude"></span>
+          </div>
+          <div class="mb-3">
+            Longitude: <span id="longitude"></span>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">State</label>
+            <select id="state" name="state" class="form-select"></select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Select a County</label>
+            <select id="county" class="form-select"></select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Desired Username</label>
+            <input type="text" id="username" name="username" class="form-control">
+            <span id="usernameError" class="small"></span>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" id="pwd" class="form-control">
+            <span id="suggestedPwd" class="text-muted small"></span>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Retype Password</label>
+            <input type="password" id="pwdAgain" class="form-control">
+            <span id="passwordError" class="text-danger small"></span>
+          </div>
+
+          <input type="hidden" id="cityHidden" name="city">
+          <input type="hidden" id="countyHidden" name="county">
+          <input type="hidden" id="usernameHidden" name="username">            
+
+          <button class="btn btn-primary w-100">Sign up</button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

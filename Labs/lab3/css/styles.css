@@ -1,0 +1,20 @@
+body {
+    font-family: Arial;
+  }
+  
+  .card {
+    border-radius: 8px;
+  }
+  
+  form label {
+    font-weight: 600;
+  }
+  
+  span {
+    margin-left: 3px;
+  }
+  
+  .list-group-item {
+    font-size: 15px;
+  }
+  
