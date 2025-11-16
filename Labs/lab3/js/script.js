@@ -120,8 +120,16 @@ async function getStates() {
 
 // FORM VALIDATION
 function validateForm(e) {
+  let usernameMsg = document.getElementById("usernameError").textContent;
   let pwd = document.getElementById("pwd").value;
   let again = document.getElementById("pwdAgain").value;
+
+  // stop if username is taken
+  if (usernameMsg.includes("Taken")) {
+    e.preventDefault();
+    alert("Username is taken");
+    return;
+  }
 
   document.getElementById("passwordError").textContent = "";
 
